@@ -1,0 +1,63 @@
+= Godot Procedural Faker
+
+== Product
+
+[cols="1,1"]
+|===
+|Method |Examples
+
+
+.3+|brand()
+|Ambalt
+|Subsche
+|Panacell
+
+.3+|product_name()
+|Auto Component
+|HD Dummy Groove
+|Auto Kit
+
+.3+|product()
+|Briest Video Dummy Groove
+|Cygfunc Gel Compressor
+|Amfunc Digital Performance Kit
+|===
+== Game
+
+[cols="1,1"]
+|===
+|Method |Examples
+
+
+.3+|category()
+|Music
+|Environmental
+|Game System
+
+.3+|mechanic()
+|Secret Unit Deployment
+|Income
+|Turn Order: Pass Order
+
+.3+|title()
+|Day of the White Rain
+|Season of the Red Gods
+|Killer Wizards
+|===
+== Skill
+
+[cols="1,1"]
+|===
+|Method |Examples
+
+
+.3+|tech_skill()
+|Backbone.JS
+|PostgreSQL
+|Cassandra
+
+.3+|specialty()
+|Template Methods
+|Performance Profiling
+|Web Optimization
+|===

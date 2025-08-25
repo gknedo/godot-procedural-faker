@@ -11,7 +11,7 @@
 
 ## Installation
 
-1. Download or clone this repository into your Godot project's `addons` folder.
+1. Download or clone this repository and add `addons/godot-procedural-faker` into your Godot project's `addons` folder.
 2. Enable the addon in your project settings.
 
 ## Usage
@@ -19,9 +19,11 @@
 ```gdscript
 var faker = ProceduralFaker.new()
 print(faker.product().brand())
-print(faker.product().product_name())
-print(faker.product().product())
+print(faker.game().title())
+print(faker.skill().specialty())
 ```
+
+**[See more →](REFERENCE.adoc)**
 
 ### Using seeds
 
