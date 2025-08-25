@@ -41,6 +41,14 @@ Note that the faker object is initialized with a randomized seed based on the ti
 
 Contributions are welcome! Please open issues or submit pull requests for new features, bug fixes, or improvements.
 
+### TODOS
+
+- Import more generators from original ffaker, prioritizing the ones that seems more important for game development
+- Add localization modules
+- Add custom data generators
+- Improve code organization
+- Improve performance
+
 ## License
 
 This code is free to use under the terms of the MIT license.
