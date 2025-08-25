@@ -8,4 +8,8 @@ func _init():
 
 func product():
 	if !product_object: product_object = ProceduralFakerProduct.new(self)
-	product_object
+	return product_object
+
+func fetch_sample(list: Array, options = {}):
+	var index = rng.randi_range(0, list.size() - 1)
+	return list[index]

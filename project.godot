@@ -15,10 +15,6 @@ run/main_scene="uid://bjpybn1uptfcs"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-ProceduralFakerAutoload="*res://addons/godot-procedural-faker/procedural_faker.gd"
-
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot-faker/plugin.cfg", "res://addons/godot-procedural-faker/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot-procedural-faker/plugin.cfg")
