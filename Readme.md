@@ -51,7 +51,10 @@ Contributions are welcome! Please open issues or submit pull requests for new fe
 
 ## License
 
-This code is free to use under the terms of the MIT license.
+Copyright (c) 2025 Gustavo Canedo.
+Copyright (c) 2013 Emmanuel Oga.
+Copyright (c) 2007 Benjamin Curtis
+See LICENSE for details.
 
 ## Credits
 
