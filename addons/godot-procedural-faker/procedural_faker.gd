@@ -2,14 +2,19 @@ class_name ProceduralFaker
 extends Resource
 
 var rng = RandomNumberGenerator.new()
-var product_object
+var instance_objects = {}
 func _init():
-	rng.randomize()
+  rng.randomize()
 
-func product():
-	if !product_object: product_object = ProceduralFakerProduct.new(self)
-	return product_object
+func product() -> ProceduralFakerProduct:
+  return _get_or_add_instance("product", ProceduralFakerProduct) as ProceduralFakerProduct
 
-func fetch_sample(list: Array, options = {}):
-	var index = rng.randi_range(0, list.size() - 1)
-	return list[index]
+func game() -> ProceduralFakerGame:
+  return _get_or_add_instance("game", ProceduralFakerGame) as ProceduralFakerGame
+
+func _get_or_add_instance(key: String, klass):
+  var instance_object = instance_objects.get(key)
+  if !instance_object:
+    instance_object = klass.new(self)
+    instance_objects.set(key, instance_object)
+  return instance_object
