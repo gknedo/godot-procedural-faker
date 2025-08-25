@@ -1,0 +1,50 @@
+# Godot Procedural Faker
+
+**Godot Procedural Faker** is an open source Godot addon inspired by the Ruby gem [ffaker](https://github.com/ffaker/ffaker). It provides tools to generate procedural, fake data for testing, prototyping, development or ingame purposes.
+
+## Features
+
+- Generate random names, addresses, emails, and more
+- Easily extendable for custom data types
+- Lightweight and fast
+- Designed for use in Godot projects
+
+## Installation
+
+1. Download or clone this repository into your Godot project's `addons` folder.
+2. Enable the addon in your project settings.
+
+## Usage
+
+```gdscript
+var faker = ProceduralFaker.new()
+print(faker.product().brand())
+print(faker.product().product_name())
+print(faker.product().product())
+```
+
+### Using seeds
+
+You can get deterministic and repeatable data setting a seed on the exposed `RandomNumberGenerator` on a faker object:
+
+```gdscript
+var faker = ProceduralFaker.new()
+faker.rng.seed = hash("My Custom Seed")
+print(faker.product().brand())
+print(faker.product().product_name())
+print(faker.product().product())
+```
+
+Note that the faker object is initialized with a randomized seed based on the timestamp. Godot `RandomNumberGenerator` can produce similar results for similar seeds, this behaviour could appear on this addon too.
+
+## Contributing
+
+Contributions are welcome! Please open issues or submit pull requests for new features, bug fixes, or improvements.
+
+## License
+
+This code is free to use under the terms of the MIT license.
+
+## Credits
+
+Inspired by [ffaker](https://github.com/ffaker/ffaker).
