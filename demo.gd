@@ -9,3 +9,6 @@ func _ready() -> void:
 	print(faker.game().category())
 	print(faker.game().mechanic())
 	print(faker.game().title())
+
+	print(faker.skill().tech_skill())
+	print(faker.skill().specialty())

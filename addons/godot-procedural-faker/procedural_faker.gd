@@ -12,6 +12,9 @@ func product() -> ProceduralFakerProduct:
 func game() -> ProceduralFakerGame:
 	return _get_or_add_instance("game", ProceduralFakerGame) as ProceduralFakerGame
 
+func skill() -> ProceduralFakerSkill:
+	return _get_or_add_instance("skill", ProceduralFakerSkill) as ProceduralFakerSkill
+
 func _get_or_add_instance(key: String, klass):
 	var instance_object = instance_objects.get(key)
 	if !instance_object:
