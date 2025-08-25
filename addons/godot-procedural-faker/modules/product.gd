@@ -1,32 +1,30 @@
 class_name ProceduralFakerProduct
-extends Resource
+extends ProceduralFakerBase
 
-var faker:ProceduralFaker
-func _init(faker: ProceduralFaker) -> void:
-	self.faker = faker
+var data = ProceduralFakerProductData
 
 func brand() -> String:
 	var r = faker.rng.randi_range(0,10)
 	if r <= 4:
-		return faker.fetch_sample(ProceduralFakerProductData.B1) + faker.fetch_sample(ProceduralFakerProductData.B2)
+		return fetch_sample(data.B1) + fetch_sample(data.B2)
 	var name = [
-		faker.fetch_sample(ProceduralFakerProductData.START),
-		faker.fetch_sample(ProceduralFakerProductData.VOWELS),
-		faker.fetch_sample(ProceduralFakerProductData.SUFFIX),
+		fetch_sample(data.START),
+		fetch_sample(data.VOWELS),
+		fetch_sample(data.SUFFIX),
 	]
 
 	if faker.rng.randi_range(0,1) == 0:
-		name.append(faker.fetch_sample(ProceduralFakerProductData.SUFFIX))
+		name.append(fetch_sample(data.SUFFIX))
 	return "".join(name).capitalize()
 	pass
 
 func product_name() -> String:
 	var name = [
-		faker.fetch_sample(ProceduralFakerProductData.ADJ)
+		fetch_sample(data.ADJ)
 	]
 	if faker.rng.randi_range(0,1) == 0:
-		name.append(faker.fetch_sample(ProceduralFakerProductData.ADJ))
-	name.append(faker.fetch_sample(ProceduralFakerProductData.NOUN))
+		name.append(fetch_sample(data.ADJ))
+	name.append(fetch_sample(data.NOUN))
 	return " ".join(name)
 
 func product() -> String:
